@@ -19,7 +19,7 @@ void scriviFile(int valore, FILE * a){
 		fprintf(a, "%d\n", valore);
 }
 
-void copiaFile(FILE * a, FILE * b){
+void leggiFile(FILE * a, FILE * b){
 	while(fscanf(a, "%d", &numero)>0){
 		scriviFile(numero, b);
 	}
@@ -32,7 +32,7 @@ int main(){
 	}while(!fopen(nome, "r"));
 	f1=fopen(nome, "r");	
 	f2=fopen("risultati.txt", "w");
-	copiaFile(f1,f2);
+	leggiFile(f1,f2);
 	fclose(f1);
 	fclose(f2);
 	printf("Fatto, i numeri primi sono stati trovati");
