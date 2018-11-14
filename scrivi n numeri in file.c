@@ -12,9 +12,11 @@ int main(){
 	f1=fopen(nome, "w");
 	printf("Inserire i numeri");
 	scanf("%d", &n);
+	
 	for(i=1; i<=n; i++){
 		fprintf(f1, "%d\n", i);
 	}
+	
 	fclose(f1);
 	printf("Fatto");
 }
